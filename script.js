@@ -14,6 +14,12 @@ const RECIPES = {
     "Shears": { output: 1, ingredients: { "Iron Ingot": 2 } },
     "Crossbow": { output: 1, ingredients: { Stick: 3, String: 2, "Iron Ingot": 1, "Tripwire Hook": 1 } },
     "Trident (Uncraftable)": { output: 1, ingredients: {} }, // for info purposes
+    "Iron Helmet": { output: 1, ingredients: { "Iron Ingot": 5 } },
+    "Diamond Chestplate": { output: 1, ingredients: { Diamond: 8 } },
+    "Golden Helmet": { output: 1, ingredients: { "Gold Ingot": 5 } },
+    "Chainmail Boots": { output: 1, ingredients: { "Iron Ingot": 4 } }, // Note: chainmail not craftable normally, but for reference
+    "Leather Boots": { output: 1, ingredients: { Leather: 4 } },
+
 
 
   },
@@ -30,6 +36,12 @@ const RECIPES = {
     "Suspicious Stew": { output: 1, ingredients: { "Red Mushroom": 1, "Brown Mushroom": 1, Flower: 1, Bowl: 1 } },
     "Cooked Porkchop": { output: 1, ingredients: { "Raw Porkchop": 1 } }, // Smelting-based
     "Golden Apple": { output: 1, ingredients: { Apple: 1, "Gold Ingot": 8 } },
+    "Cooked Beef (Steak)": { output: 1, ingredients: { "Raw Beef": 1 } }, // Smelting
+    "Cooked Chicken": { output: 1, ingredients: { "Raw Chicken": 1 } }, // Smelting
+    "Cooked Mutton": { output: 1, ingredients: { "Raw Mutton": 1 } }, // Smelting
+    "Cooked Salmon": { output: 1, ingredients: { "Raw Salmon": 1 } }, // Smelting
+    "Cooked Cod": { output: 1, ingredients: { "Raw Cod": 1 } }, // Smelting
+
 
 
   },
@@ -50,6 +62,12 @@ const RECIPES = {
     "Observer": { output: 1, ingredients: { Cobblestone: 6, Redstone: 2, Quartz: 1 } },
     "Bell": { output: 1, ingredients: { "Gold Ingot": 3, "Wood Plank": 1 } },
     "Daylight Sensor": { output: 1, ingredients: { Glass: 3, "Nether Quartz": 3, "Wood Slab": 3 } },
+    "Sticky Piston": { output: 1, ingredients: { Piston: 1, Slimeball: 1 } },
+    "Daylight Sensor": { output: 1, ingredients: { Glass: 3, "Nether Quartz": 3, "Wood Slab": 3 } },
+    "Observer": { output: 1, ingredients: { Cobblestone: 6, Redstone: 2, Quartz: 1 } },
+    "Weighted Pressure Plate (Light)": { output: 1, ingredients: { Gold Ingot: 2 } },
+    "Weighted Pressure Plate (Heavy)": { output: 1, ingredients: { Iron Ingot: 2 } },
+
 
 
   },
@@ -85,6 +103,23 @@ const RECIPES = {
     "Brown Dye": { output: 1, ingredients: { "Cocoa Beans": 1 } },
 
   },
+  mobs: {
+      "Creeper": { output: 1, ingredients: { "Gunpowder": 0.5 } },
+      "Skeleton": { output: 1, ingredients: { "Bone": 1, "Arrow": 1 } },
+      "Zombie": { output: 1, ingredients: { "Rotten Flesh": 1 } },
+      "Spider": { output: 1, ingredients: { "String": 1, "Spider Eye": 0.33 } },
+      "Enderman": { output: 1, ingredients: { "Ender Pearl": 0.5 } },
+      "Slime (Large)": { output: 1, ingredients: { "Slimeball": 0.5 } },
+      "Witch": { output: 1, ingredients: { "Redstone": 0.25, "Glowstone Dust": 0.25, "Sugar": 0.25, "Gunpowder": 0.25, "Glass Bottle": 0.25, "Spider Eye": 0.25, "Stick": 0.25 } },
+      "Wither Skeleton": { output: 1, ingredients: { "Coal": 0.33, "Bone": 1, "Stone Sword": 0.1, "Wither Skeleton Skull": 0.025 } },
+      "Blaze": { output: 1, ingredients: { "Blaze Rod": 1 } },
+      "Ender Dragon": { output: 1, ingredients: { "Dragon Egg": 1, "Dragon Breath": 0 } },
+      "Piglin": { output: 1, ingredients: { "Gold Nugget": 1, "Rotten Flesh": 1 } },
+      "Iron Golem": { output: 1, ingredients: { "Iron Ingot": 3, "Poppy": 3 } },
+      "Guardian": { output: 1, ingredients: { "Prismarine Shard": 2, "Raw Cod": 1 } },
+      "Shulker": { output: 1, ingredients: { "Shulker Shell": 1 } },
+  },
+
  
   misc: {
     "Book": { output: 1, ingredients: { Leather: 1, Paper: 3 } },
@@ -101,6 +136,12 @@ const RECIPES = {
     "Armor Stand": { output: 1, ingredients: { Stick: 6, "Stone Slab": 1 } },
     "Flower Pot": { output: 1, ingredients: { Brick: 3 } },
     "Barrel": { output: 1, ingredients: { Stick: 2, "Wood Plank": 6 } },
+    "Cauldron": { output: 1, ingredients: { Iron Ingot: 7 } },
+    "Clock": { output: 1, ingredients: { Gold Ingot: 4, Redstone: 1 } },
+    "Enchanted Book": { output: 1, ingredients: { Book: 1 } }, // placeholder, can be enchanted in-game
+    "Name Tag": { output: 1, ingredients: { Paper: 1, String: 1 } }, // not craftable in vanilla, for reference
+    "Firework Rocket": { output: 3, ingredients: { Paper: 1, Gunpowder: 1 } },
+
 
 
   }
