@@ -4,29 +4,39 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Minecraft Material Calculator</title>
-  <link rel="stylesheet" href="styles.css"/>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <div class="container">
     <h1>Minecraft Material Calculator</h1>
 
-    <div class="card">
-      <label>Filter Category</label>
-      <select id="categoryFilter"></select>
+    <!-- Filter Dropdown -->
+    <label for="categorySelect">Filter by Category</label>
+    <select id="categorySelect">
+      <option value="all">All</option>
+      <option value="equipment">Equipment</option>
+      <option value="food">Food</option>
+      <option value="redstone">Redstone</option>
+      <option value="misc">Miscellaneous</option>
+      <option value="potions">Potions</option>
+      <option value="dyes">Dyes</option>
+      <option value="mobs">Mob Drops</option>
+    </select>
 
-      <label>Select Item</label>
-      <select id="itemSelect"></select>
+    <!-- Item Dropdown -->
+    <label for="itemSelect">Select Item</label>
+    <select id="itemSelect"></select>
 
-      <label>Quantity</label>
-      <input type="number" id="quantityInput" value="1" min="1"/>
-    </div>
+    <!-- Quantity Input -->
+    <label for="quantityInput">Quantity</label>
+    <input type="number" id="quantityInput" min="1" value="1" />
 
-    <div class="card">
-      <h2>Materials Needed</h2>
-      <ul id="resultsList"></ul>
-    </div>
+    <!-- Results -->
+    <h2>Materials Needed</h2>
+    <ul id="materialsList"></ul>
   </div>
 
   <script src="script.js"></script>
 </body>
 </html>
+
