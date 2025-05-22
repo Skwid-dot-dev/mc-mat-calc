@@ -146,10 +146,11 @@ const getAllRecipes = () => {
   );
 };
 
-const categorySelect = document.getElementById('categoryFilter');
-const itemSelect = document.getElementById('itemSelect');
-const quantityInput = document.getElementById('quantityInput');
-const resultsList = document.getElementById('resultsList');
+const categorySelect = document.getElementById("categorySelect");
+const itemSelect = document.getElementById("itemSelect");
+const quantityInput = document.getElementById("quantityInput");
+const materialsList = document.getElementById("materialsList");
+
 
 let allRecipes = getAllRecipes();
 
