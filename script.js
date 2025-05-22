@@ -16,7 +16,7 @@ const RECIPES = {
     "Iron Helmet": { output: 1, ingredients: { "Iron Ingot": 5 } },
     "Diamond Chestplate": { output: 1, ingredients: { "Diamond": 8 } },
     "Golden Helmet": { output: 1, ingredients: { "Gold Ingot": 5 } },
-    "Leather Boots": { output: 1, ingredients: { "Leather": 4 } }
+    "Leather Boots": { output: 1, ingredients: { "Leather": 4 } },
 
 
 
@@ -38,7 +38,7 @@ const RECIPES = {
     "Cooked Chicken": { output: 1, ingredients: { "Raw Chicken": 1 } }, // Smelting
     "Cooked Mutton": { output: 1, ingredients: { "Raw Mutton": 1 } }, // Smelting
     "Cooked Salmon": { output: 1, ingredients: { "Raw Salmon": 1 } }, // Smelting
-    "Cooked Cod": { output: 1, ingredients: { "Raw Cod": 1 } } // Smelting
+    "Cooked Cod": { output: 1, ingredients: { "Raw Cod": 1 } }, // Smelting
 
   },
   
@@ -59,7 +59,7 @@ const RECIPES = {
     "Daylight Sensor": { output: 1, ingredients: { "Glass": 3, "Nether Quartz": 3, "Wood Slab": 3 } },
     "Sticky Piston": { output: 1, ingredients: { "Piston": 1, "Slimeball": 1 } },
     "Weighted Pressure Plate (Light)": { output: 1, ingredients: { "Gold Ingot": 2 } },
-    "Weighted Pressure Plate (Heavy)": { output: 1, ingredients: { "Iron Ingot": 2 } }
+    "Weighted Pressure Plate (Heavy)": { output: 1, ingredients: { "Iron Ingot": 2 } },
 
   },
 
@@ -72,7 +72,7 @@ const RECIPES = {
       "Potion of Night Vision": { output: 1, ingredients: { "Water Bottle": 1, "Nether Wart": 1, "Golden Carrot": 1 } },
       "Potion of Invisibility": { output: 1, ingredients: { "Potion of Night Vision": 1, "Fermented Spider Eye": 1 } },
       "Potion of Poison": { output: 1, ingredients: { "Water Bottle": 1, "Nether Wart": 1, "Spider Eye": 1 } },
-      "Potion of Harming (Instant Damage)": { output: 1, ingredients: { "Potion of Poison": 1, "Fermented Spider Eye": 1 } }
+      "Potion of Harming (Instant Damage)": { output: 1, ingredients: { "Potion of Poison": 1, "Fermented Spider Eye": 1 } },
 },
 
   dyes: {
@@ -91,7 +91,7 @@ const RECIPES = {
     "Light Gray Dye": { output: 1, ingredients: { "White Dye": 1, "Black Dye": 1 } },
     "Gray Dye": { output: 1, ingredients: { "Black Dye": 1, "White Dye": 1 } },
     "Cyan Dye": { output: 1, ingredients: { "Green Dye": 1, "Blue Dye": 1 } },
-    "Brown Dye": { output: 1, ingredients: { "Cocoa Beans": 1 } }
+    "Brown Dye": { output: 1, ingredients: { "Cocoa Beans": 1 } },
 
   },
   mobs: {
@@ -108,7 +108,7 @@ const RECIPES = {
       "Piglin": { output: 1, ingredients: { "Gold Nugget": 1, "Rotten Flesh": 1 } },
       "Iron Golem": { output: 1, ingredients: { "Iron Ingot": 3, "Poppy": 3 } },
       "Guardian": { output: 1, ingredients: { "Prismarine Shard": 2, "Raw Cod": 1 } },
-      "Shulker": { output: 1, ingredients: { "Shulker Shell": 1 } }
+      "Shulker": { output: 1, ingredients: { "Shulker Shell": 1 } },
   },
 
  
@@ -131,7 +131,7 @@ const RECIPES = {
     "Clock": { output: 1, ingredients: { "Gold Ingot": 4, "Redstone": 1 } },
     "Enchanted Book": { output: 1, ingredients: { "Book": 1 } }, // placeholder, can be enchanted in-game
     "Name Tag": { output: 1, ingredients: { "Paper": 1, "String": 1 } }, // not craftable in vanilla, for reference
-    "Firework Rocket": { output: 3, ingredients: { "Paper": 1, "Gunpowder": 1 } }
+    "Firework Rocket": { output: 3, ingredients: { "Paper": 1, "Gunpowder": 1 } },
   }
   
 };
