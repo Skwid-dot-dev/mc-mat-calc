@@ -65,8 +65,8 @@ const RECIPES = {
     "Sticky Piston": { output: 1, ingredients: { Piston: 1, Slimeball: 1 } },
     "Daylight Sensor": { output: 1, ingredients: { Glass: 3, "Nether Quartz": 3, "Wood Slab": 3 } },
     "Observer": { output: 1, ingredients: { Cobblestone: 6, Redstone: 2, Quartz: 1 } },
-    "Weighted Pressure Plate (Light)": { output: 1, ingredients: { Gold Ingot: 2 } },
-    "Weighted Pressure Plate (Heavy)": { output: 1, ingredients: { Iron Ingot: 2 } },
+    "Weighted Pressure Plate (Light)": { output: 1, ingredients: { "Gold Ingot": 2 } },
+    "Weighted Pressure Plate (Heavy)": { output: 1, ingredients: { "Iron Ingot": 2 } },
 
 
 
