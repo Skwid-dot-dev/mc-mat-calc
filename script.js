@@ -140,60 +140,67 @@ const RECIPES = {
   
 };
 
-const getAllRecipes = () => {
-  return Object.entries(RECIPES).flatMap(([category, items]) =>
-    Object.entries(items).map(([name, data]) => ({ name, category, ...data }))
-  );
-};
 
 const categorySelect = document.getElementById("categorySelect");
 const itemSelect = document.getElementById("itemSelect");
 const quantityInput = document.getElementById("quantityInput");
 const materialsList = document.getElementById("materialsList");
 
+function getAllRecipes() {
+  return Object.entries(RECIPES).flatMap(([category, items]) =>
+    Object.entries(items).map(([name, data]) => ({ name, category, ...data }))
+  );
+}
 
-let allRecipes = getAllRecipes();
-
-function populateCategorySelect() {
-  categorySelect.innerHTML = `<option value="all">All</option>`;
-  Object.keys(RECIPES).forEach(cat => {
-    categorySelect.innerHTML += `<option value="${cat}">${capitalize(cat)}</option>`;
+function populateItemDropdown(recipes) {
+  itemSelect.innerHTML = "";
+  recipes.forEach(({ name }) => {
+    const opt = document.createElement("option");
+    opt.value = name;
+    opt.textContent = name;
+    itemSelect.appendChild(opt);
   });
 }
 
-function populateItemSelect() {
-  const selectedCategory = categorySelect.value;
-  let recipesToShow = selectedCategory === 'all'
-    ? allRecipes
-    : allRecipes.filter(r => r.category === selectedCategory);
-
-  itemSelect.innerHTML = '';
-  recipesToShow.forEach(recipe => {
-    itemSelect.innerHTML += `<option value="${recipe.name}">${recipe.name}</option>`;
-  });
-  updateResults();
-}
-
-function updateResults() {
-  const recipe = allRecipes.find(r => r.name === itemSelect.value);
-  const quantity = parseInt(quantityInput.value) || 1;
-  const result = [];
-
-  for (const [ingredient, amount] of Object.entries(recipe.ingredients)) {
-    const total = Math.ceil((amount / recipe.output) * quantity);
-    result.push(`${ingredient}: ${total}`);
+function calculateMaterials(recipe, quantity) {
+  const scaled = [];
+  for (const [material, amount] of Object.entries(recipe.ingredients)) {
+    scaled.push([material, Math.ceil((amount / recipe.output) * quantity)]);
   }
-
-  resultsList.innerHTML = result.map(r => `<li>${r}</li>`).join('');
+  return scaled;
 }
 
-function capitalize(str) {
-  return str.charAt(0).toUpperCase() + str.slice(1);
+function updateMaterials() {
+  const selectedName = itemSelect.value;
+  const quantity = parseInt(quantityInput.value) || 1;
+  const recipe = getAllRecipes().find((r) => r.name === selectedName);
+  const materials = calculateMaterials(recipe, quantity);
+
+  materialsList.innerHTML = "";
+  materials.forEach(([material, total]) => {
+    const li = document.createElement("li");
+    li.textContent = `${material}: ${total}`;
+    materialsList.appendChild(li);
+  });
 }
 
-categorySelect.addEventListener('change', populateItemSelect);
-itemSelect.addEventListener('change', updateResults);
-quantityInput.addEventListener('input', updateResults);
+function applyCategoryFilter() {
+  const category = categorySelect.value;
+  const all = getAllRecipes();
+  const filtered = category === "all" ? all : all.filter(r => r.category === category);
+  populateItemDropdown(filtered);
+  itemSelect.selectedIndex = 0;
+  updateMaterials();
+}
+
+// Event Listeners
+categorySelect.addEventListener("change", applyCategoryFilter);
+itemSelect.addEventListener("change", updateMaterials);
+quantityInput.addEventListener("input", updateMaterials);
+
+// Initial Setup
+applyCategoryFilter();
+
 
 // Initialize
 populateCategorySelect();
