@@ -42,8 +42,6 @@ const RECIPES = {
     "Cooked Salmon": { output: 1, ingredients: { "Raw Salmon": 1 } }, // Smelting
     "Cooked Cod": { output: 1, ingredients: { "Raw Cod": 1 } }, // Smelting
 
-
-
   },
   
   redstone: {
@@ -59,12 +57,9 @@ const RECIPES = {
     "Tripwire Hook": { output: 2, ingredients: { Stick: 1, "Iron Ingot": 1, "Wood Plank": 1 } },
     "Lever": { output: 1, ingredients: { Stick: 1, Cobblestone: 1 } },
     "Target Block": { output: 1, ingredients: { Hay: 1, Redstone: 4 } },
-    "Observer": { output: 1, ingredients: { Cobblestone: 6, Redstone: 2, Quartz: 1 } },
     "Bell": { output: 1, ingredients: { "Gold Ingot": 3, "Wood Plank": 1 } },
     "Daylight Sensor": { output: 1, ingredients: { Glass: 3, "Nether Quartz": 3, "Wood Slab": 3 } },
     "Sticky Piston": { output: 1, ingredients: { Piston: 1, Slimeball: 1 } },
-    "Daylight Sensor": { output: 1, ingredients: { Glass: 3, "Nether Quartz": 3, "Wood Slab": 3 } },
-    "Observer": { output: 1, ingredients: { Cobblestone: 6, Redstone: 2, Quartz: 1 } },
     "Weighted Pressure Plate (Light)": { output: 1, ingredients: { "Gold Ingot": 2 } },
     "Weighted Pressure Plate (Heavy)": { output: 1, ingredients: { "Iron Ingot": 2 } },
 
@@ -136,16 +131,12 @@ const RECIPES = {
     "Armor Stand": { output: 1, ingredients: { Stick: 6, "Stone Slab": 1 } },
     "Flower Pot": { output: 1, ingredients: { Brick: 3 } },
     "Barrel": { output: 1, ingredients: { Stick: 2, "Wood Plank": 6 } },
-    "Cauldron": { output: 1, ingredients: { Iron Ingot: 7 } },
-    "Clock": { output: 1, ingredients: { Gold Ingot: 4, Redstone: 1 } },
+    "Cauldron": { output: 1, ingredients: { "Iron Ingot": 7 } },
+    "Clock": { output: 1, ingredients: { "Gold Ingot": 4, Redstone: 1 } },
     "Enchanted Book": { output: 1, ingredients: { Book: 1 } }, // placeholder, can be enchanted in-game
     "Name Tag": { output: 1, ingredients: { Paper: 1, String: 1 } }, // not craftable in vanilla, for reference
     "Firework Rocket": { output: 3, ingredients: { Paper: 1, Gunpowder: 1 } },
-
-
-
   }
-
   
 };
 
